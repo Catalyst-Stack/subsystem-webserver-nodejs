@@ -1,0 +1,44 @@
+{
+  "name": "@catalyststack/subsystem-webserver",
+  "description": "An opinionated webserver subsystem for Node.js applications using koa as a backbone.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Catalyst-Stack/subsystem-webserver-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Catalyst-Stack/subsystem-webserver-nodejs.git"
+  },
+  "author": {
+    "name": "Almir Kadric",
+    "email": "github@almirkadric.com",
+    "url": "https://github.com/AlmirKadric"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint .",
+    "test:unit": "mocha ./test",
+    "precommit": "npm run test"
+  },
+  "dependencies": {
+    "@koa/cors": "2.2.2",
+    "codependency": "AlmirKadric/codependency#master",
+    "koa": "2.5.1",
+    "koa-joi-router": "5.1.0",
+    "koa-logger": "3.2.0",
+    "koa-mount": "3.0.0",
+    "koa-passport": "4.1.0",
+    "koa-redis": "3.1.2",
+    "koa-rewrite": "3.0.1",
+    "koa-session": "5.8.1",
+    "koa-static": "5.0.0"
+  },
+  "optionalPeerDependencies": {
+    "@catalyststack/subsystem-logger": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "4.13.0",
+    "husky": "0.14.3",
+    "mocha": "4.0.1"
+  }
+}
